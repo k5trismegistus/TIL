@@ -1,0 +1,29 @@
+?program: [(state)+] ["return" expr ";"]?
+
+?state: expr ";"
+      | assignment ";"
+
+assignment: new_symbol "=" expr
+new_symbol: WORD
+
+?expr: term
+     | addition
+     | substraction
+addition: expr "+" term
+substraction: expr "-" term
+?term: fact
+     | multiplication
+     | division
+multiplication: term "*" fact
+division: term "/" fact
+?fact: number
+     | symbol
+     | priority
+?priority: "(" expr ")"
+symbol: WORD
+number: SIGNED_NUMBER
+
+%import common.WORD
+%import common.SIGNED_NUMBER
+%import common.WS
+%ignore WS
