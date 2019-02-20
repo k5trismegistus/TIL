@@ -1,0 +1,18 @@
+{
+  "name": "20190220_input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "readline-sync": "^1.4.9",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
